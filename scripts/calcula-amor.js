@@ -29,14 +29,14 @@ function verificar(amor1Array, amor1, amor2Array, amor2) {
 
     comparaArray(amor1Array, amor2Array)
     removeNull(nums)
-    //percentage(nums)
+    percentage(nums)
     console.log(nums)
 }
 
 function removeNull(vet) {
     let index = vet.length-1;
     while(index >=0) {
-        if(Number(vet[index]) >= 0) {
+        if(vet[index] >= 0) {
             index = -1;
         } else {
             vet.pop()
@@ -48,17 +48,35 @@ function removeNull(vet) {
 function percentage(nums) {
     let right
     let left
+    let again = false
+    let j
     
     while(nums.length!=2) {
         left = 0
         right = nums.length-1
         while(left<right) {
-            parseInt(nums[left]) += parseInt(num[right])
-            slice(rigth, 1)
+            nums[left] += nums[right]
+            nums.splice(right, 1)
             left++
-            rigth--
+            right--
         }
-    }    
+    }
+    for(i=0; i<nums.length; i++) {
+        if(nums[i] / 10 >=1) {
+            again = true
+            j = nums.length-1
+            nums.push(nums[j])
+            while(j > i+1) {
+                swapArray(nums, j, j-1)
+                j--
+            }
+            nums[i+1] = nums[i] % 10
+            nums[i] = 1;
+        }
+    }
+    if(again==true) {
+        percentage(nums)
+    }
 }
 
 function comparaArray(vet1, vet2) {
@@ -72,7 +90,7 @@ function comparaArray(vet1, vet2) {
             i=0
             while(i<vet1.length) {
                 if(vet2.indexOf(vet1[i]) >=0) {
-                    nums[numIndex] = "2";
+                    nums[numIndex] = 2;
                     numIndex++
                     vet1.splice(i, 1)
                     vet2.splice(i, 1)
@@ -82,14 +100,14 @@ function comparaArray(vet1, vet2) {
                 }
             }
             for(i=0; i<vet1.length+vet2.length; i++) {
-                nums[numIndex] = "1"
+                nums[numIndex] = 1
                 numIndex++
             }
         } else {
             i=0
             while(i<vet2.length) {
                 if(vet1.indexOf(vet2[i]) >=0) {
-                    nums[numIndex] = "2";
+                    nums[numIndex] = 2;
                     numIndex++
                     vet1.splice(i, 1)
                     vet2.splice(i, 1)
@@ -99,7 +117,7 @@ function comparaArray(vet1, vet2) {
                 }
             } 
             for(i=0; i<vet1.length+vet2.length; i++) {
-                nums[numIndex] = "1"
+                nums[numIndex] = 1
                 numIndex++
             }
         }
@@ -143,4 +161,10 @@ function tiraEspaço(vet) {
             vet.splice(i, 1)
         }
     }
+}
+
+function swapArray(array, item1, item2) {
+    let aux = array[item1]
+    array[item1] = array[item2]
+    array[item2] = aux
 }
