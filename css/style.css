@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+    margin-top: 10%;
+    font-family: 'Comfortaa', cursive;
+    font-size: 14pt;
+    background-color: rgb(247, 44, 199);
+    color: white;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+}
+
+footer {
+    margin: auto;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    width: 550px;
+    height: 350px;
+    margin: auto;
+    border-radius: 5%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    display: flex;
+}
+
+img {
+    position: absolute;
+    margin-top: 115px;
+    margin-left:228px;
+}
+
+input {
+    position: absolute;
+    border: none;
+    padding: 10px;
+    background-color: rgb(221, 221, 221);
+    border-radius: 15px;
+    outline: none;
+    font:normal 12pt Comfortaa;
+    transition: background-color 0.5s;
+}    
+
+#amor1 {
+    margin-top: 135px;
+}
+
+#amor2 {
+    margin-top: 135px;
+    margin-left: 336px;
+}
+
+section h1 {
+    position: absolute;
+    margin-left: 60px;
+    color: black;
+    margin-top: 20px;
+}
+
+#verificar {
+    margin-top: 180px;
+}
+
+#porcentagem {
+    color: black;
+    margin-top: 190px;
+    margin-left: 93px;
+}
+
+input:hover {
+    background-color: rgb(204, 204, 204);
+}
