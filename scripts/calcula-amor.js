@@ -1,15 +1,11 @@
-let string = "harry styles"
-let vet = new Array(string.length)
-let string2 = "arry feijao"
-let vet2 = new Array(string2.length) 
-let nums = new Array(50)
-verificar(vet, string, vet2, string2)
-function verificar(amor1Array, amor1, amor2Array, amor2) {
-    /*let amor1 = document.getElementById("amor1").value.toLowerCase()
+function Verificar() {
+    let amor1 = document.getElementById("amor1").value.toLowerCase()
     let amor2 = document.getElementById("amor2").value.toLowerCase()
     let amor1Array = new Array(amor1.length)
-    let amor2Array = new Array(amor2.length)*/
-    
+    let amor2Array = new Array(amor2.length)
+    nums = new Array(50)
+    porcentagem = document.querySelector("p#porcentagem")
+
     for(i=0; i<amor1Array.length; i++) {
         amor1Array[i] = amor1.charAt(i)
     }
@@ -30,7 +26,9 @@ function verificar(amor1Array, amor1, amor2Array, amor2) {
     comparaArray(amor1Array, amor2Array)
     removeNull(nums)
     percentage(nums)
-    console.log(nums)
+    
+    porcentagem.innerText = nums.join('') + "%"
+    porcentagem.style.color = "black"
 }
 
 function removeNull(vet) {

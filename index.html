@@ -8,22 +8,20 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Será que você combina com o seu(ua) amado(a)</title>
 </head>
-<body>
-        
-    <header>
-        <h1>Quanto você combina com o seu(ua) amado(a)</h1>
-    </header>
-    <section>
-        <h1>Encontre o seu(ua) amado(a)</h1>
-        <input type="text" name="amor1" id="amor1" placeholder="Pessoa1">
-        <img src="imagens/coracao.png">
-        <input type="text" name="amor2" id="amor2" placeholder="Pessoa2">
-        <input type="button" value="Verificar" id="verificar" onclick="verificar()">
-        <p id="porcentagem">P</p>
-    </section>
-    <footer>
-        &copy Alezinho_Ninja
-    </footer>
+<body>    
+    <div id="iterface">
+        <header>
+            <h1>Quanto você combina com o seu(ua) amado(a)</h1>
+        </header>
+        <section>
+            <h1>Encontre o seu(ua) amado(a)</h1>
+            <input type="text" name="amor1" id="amor1" placeholder="Pessoa1" maxlength="50">
+            <img src="imagens/coracao.png">
+            <input type="text" name="amor2" id="amor2" placeholder="Pessoa2">
+            <input type="button" value="Verificar" id="verificar" onclick="Verificar()" maxlength="50">
+            <p id="porcentagem">P</p>
+        </section>
+    </div>
     <script src="scripts/calcula-amor.js"></script>
 </body>
 </html>
